@@ -1,5 +1,5 @@
 #not ignore
-!data/cloud_practioner_1.json
+!/data/cloud_practioner_1.json
 
 # Python specific
 __pycache__/
