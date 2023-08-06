@@ -1,7 +1,3 @@
-#not ignore
-!data/*.json
-!.data/*json
-
 # Python specific
 __pycache__/
 *.pyc
@@ -25,8 +21,9 @@ __pycache__/
 .localstack/
 
 # Docker volume
-volume/
-.volume/
+volume/              
+!data/               
+!data/data.json 
 
 # Virtual environment
 venv/
