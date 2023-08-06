@@ -1,3 +1,6 @@
+#not ignore
+!data/cloud_practioner_1.json
+
 # Python specific
 __pycache__/
 *.pyc
