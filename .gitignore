@@ -1,5 +1,6 @@
 #not ignore
 !data/*.json
+!.data/*json
 
 # Python specific
 __pycache__/
