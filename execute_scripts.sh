@@ -12,6 +12,18 @@ bash ./scripts/create_profile.sh
 echo "Executando create_bucket.sh"
 bash ./scripts/create_bucket.sh
 
+# Navigate to the lambda directory
+cd lambda
+
+# Activate the virtual environment (venv)
+source venv/bin/activate
+
+# Install dependencies from requirements.txt
+pip install -r requirements.txt
+
+# Go back to the previous directory
+cd ..
+
 # create_function
 echo "Executando create_function.sh"
 bash ./scripts/create_function.sh
