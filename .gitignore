@@ -1,0 +1,49 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyz/
+*.dist-info/
+*.egg-info/
+*.egg
+*.exe
+*.dll
+*.so
+*.out
+*.pydevproject
+*.pydevworkspace
+.vscode/
+
+# LocalStack specific
+.localstack/
+
+# Virtual environment
+venv/
+env/
+env.bak/
+ENV/
+venv.bak/
+.venv/
+.ENV/
+.venv.bak/
+pip-selfcheck.json
+
+# Editor specific
+.idea/
+.vs/
+
+# Others
+*.log
+*.json
+*.ini
+*.cfg
+*.csv
+*.db
+*.sqlite
+*.db-journal
+*.swp
+.DS_Store
+Thumbs.db
