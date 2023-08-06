@@ -20,6 +20,9 @@ __pycache__/
 # LocalStack specific
 .localstack/
 
+# Docker volume
+.volume/
+
 # Virtual environment
 venv/
 env/
