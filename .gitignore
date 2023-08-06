@@ -20,6 +20,19 @@ __pycache__/
 # LocalStack specific
 .localstack/
 
+# Others
+*.log
+*.json
+*.ini
+*.cfg
+*.csv
+*.db
+*.sqlite
+*.db-journal
+*.swp
+.DS_Store
+Thumbs.db
+
 # Docker volume
 volume/              
 !data/               
@@ -39,16 +52,3 @@ pip-selfcheck.json
 # Editor specific
 .idea/
 .vs/
-
-# Others
-*.log
-*.json
-*.ini
-*.cfg
-*.csv
-*.db
-*.sqlite
-*.db-journal
-*.swp
-.DS_Store
-Thumbs.db

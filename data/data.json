@@ -1,0 +1,75 @@
+{
+    "title": "Simulado AWS Certified Cloud Practitioner",
+    "questions": [
+      {
+        "question": "What is the AWS Cloud?",
+        "options": [
+          "A physical data center managed by AWS",
+          "A global network of AWS offices",
+          "A collection of cloud-based services and resources provided by AWS",
+          "A physical computer owned by AWS"
+        ],
+        "correctIndex": 2,
+        "isMultipleChoice": false
+      },
+      {
+        "question": "What is AWS Lambda?",
+        "options": [
+          "A service that provides virtual servers in the cloud",
+          "A managed container service",
+          "A serverless compute service",
+          "A database service"
+        ],
+        "correctIndex": 2,
+        "isMultipleChoice": false
+      },
+      {
+        "question": "Which AWS service is used for object storage?",
+        "options": [
+          "AWS S3",
+          "AWS RDS",
+          "AWS EC2",
+          "AWS IAM"
+        ],
+        "correctIndex": 0,
+        "isMultipleChoice": false
+      },
+      {
+        "question": "What is the billing model for AWS Lambda?",
+        "options": [
+          "Pay-as-you-go",
+          "Flat monthly fee",
+          "Free tier with limited usage",
+          "Hourly billing"
+        ],
+        "correctIndex": 0,
+        "isMultipleChoice": false
+      },
+      {
+        "question": "What is AWS IAM used for?",
+        "options": [
+          "Managing database instances",
+          "Creating virtual machines",
+          "Managing user access and permissions",
+          "Monitoring network traffic"
+        ],
+        "correctIndex": 2,
+        "isMultipleChoice": false
+      },
+      {
+        "question": "Which of the following AWS services are considered storage services? (Select two correct options)",
+        "options": [
+          "Amazon EC2",
+          "Amazon S3",
+          "AWS RDS",
+          "Amazon DynamoDB",
+          "AWS Glacier"
+        ],
+        "correctIndex": [
+          1,
+          3
+        ],
+        "isMultipleChoice": true
+      }
+    ]
+}
