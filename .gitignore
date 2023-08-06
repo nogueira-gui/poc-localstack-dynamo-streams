@@ -34,7 +34,7 @@ __pycache__/
 Thumbs.db
 
 # Docker volume
-volume/              
+/volume/*           
 !data/               
 !data/data.json 
 
