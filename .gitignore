@@ -1,5 +1,5 @@
 #not ignore
-!data/
+!data/*
 
 # Python specific
 __pycache__/
