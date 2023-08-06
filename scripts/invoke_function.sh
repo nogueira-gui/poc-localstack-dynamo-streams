@@ -7,7 +7,7 @@ export AWS_SECRET_ACCESS_KEY=my_secret_key
 
 cat > payload.json <<EOF
 {
-    "file_key": "cloud_practioner_1.json"
+    "file_key": "data.json"
 }
 EOF
 
