@@ -12,11 +12,14 @@ bash ./scripts/create_profile.sh
 echo "Executando create_bucket.sh"
 bash ./scripts/create_bucket.sh
 
+echo "Executando create_queue.sh"
+bash ./scripts/create_queue.sh
+
 # Navigate to the lambda directory
 cd lambda
 
 # Activate the virtual environment (venv)
-source venv/bin/activate
+source venv/Scripts/activate
 
 # Install dependencies from requirements.txt
 pip install -r requirements.txt
@@ -29,5 +32,5 @@ echo "Executando create_function.sh"
 bash ./scripts/create_function.sh
 
 # invoke_function
-echo "Executando invoke_function.sh"
-bash ./scripts/invoke_function.sh
+# echo "Executando invoke_function.sh"
+# bash ./scripts/invoke_function.sh

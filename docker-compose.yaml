@@ -13,6 +13,8 @@ services:
       - AWS_ACCESS_KEY_ID=my_access_key
       - AWS_SECRET_KEY_ID=my_secret_key
       - AWS_REGION=us-east-1
+      - ENVIRONMENT=localstack
+      - QUEUE_URL=http://localhost:4566/000000000000/test-queue
       - DOCKER_HOST=unix:///var/run/docker.sock
     volumes:
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
