@@ -36,11 +36,11 @@ Este projeto simula o comportamento de DynamoDB Streams usando o LocalStack, uma
 - src/queue.py: Contém a função send que envia mensagens para uma fila SQS.
 - docker-compose.yml: Arquivo de configuração do Docker Compose para o LocalStack.
 - execute_scripts.sh: Script para executar comandos que criam a infraestrutura AWS no LocalStack.
-- 01_create_profile.sh: Cria o perfil da conta.
-- 02_create_bucket.sh: Cria bucket S3
-- 03_create_queue.sh: Cria Fila SQS
-- 04_create_function.sh: Cria Função Lambda
-- 05_create_dynamodb_table.sh: Cria tabela do dynamoDB e Configura o stream com a função Lambda
+- scripts/01_create_profile.sh: Cria o perfil da conta.
+- scripts/02_create_bucket.sh: Cria bucket S3
+- scripts/03_create_queue.sh: Cria Fila SQS
+- scripts/04_create_function.sh: Cria Função Lambda
+- scripts/05_create_dynamodb_table.sh: Cria tabela do dynamoDB e Configura o stream com a função Lambda
 - insert.sh: Insere um registro na tabela do dynamoDB
 
 ## Contribuições
