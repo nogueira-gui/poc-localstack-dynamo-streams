@@ -1,50 +1,48 @@
 # DynamoDB Streams Simulation using LocalStack
 
-Este projeto simula o comportamento de DynamoDB Streams usando o LocalStack, uma ferramenta que fornece uma simulação local de vários serviços da AWS, incluindo DynamoDB, Lambda e SQS que são usados neste exemplo.
+This project simulates the behavior of DynamoDB Streams using LocalStack, a tool that provides a local simulation of various AWS services, including DynamoDB, Lambda, and SQS, which are used in this example.
+## Prerequisites
 
-## Pré-requisitos
+- [Docker](https://www.docker.com/)  installed and running.
 
-- [Docker](https://www.docker.com/) instalado e em execução.
+## Environment Setup
 
-## Configuração do Ambiente
-
-1. Clone este repositório:
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/nogueira-gui/poc-localstack-dynamo-streams
    cd poc-localstack-dynamo-streams
 
-2. Execute o docker-compose criar imagem do localstack:
+2. Execute the Docker Compose to create the LocalStack image:
     ```bash
    docker-compose up
 
-3. Em seguida execute o arquivo abaixo responsável por executar os comandos de criação dos serviços Dynamo, Lambda e SQS:
+3. Then run the script responsible for executing the commands to create Dynamo, Lambda, and SQS services:
     ```bash
    ./execute_scripts.sh
 
-4. Para testar o funcionamento execute o arquivo que insere um registro na tabela do dynamoDb
+4. To test the functionality, execute the script that inserts a record into the DynamoDB table:
     ```bash
     ./insert.sh  
 
-5. Verifique a saída no terminal, que deve indicar o resultado do processamento do evento publicado na fila SQS.
+5. Check the output in the terminal, which should indicate the result of processing the event published in the SQS queue:
     ```bash
     aws --endpoint-url http://localhost:4566 sqs receive-message --queue-url http://localhost:4566/000000000000/test-queue --region us-east-1
 
-## Estrutura do Projeto
-- lambda_function.py: Contém a função Lambda simulada que processa eventos do DynamoDB Streams e envia o resultado para uma fila.
-- src/dynamo_event_handler.py: Contém a lógica de processamento dos eventos do DynamoDB Streams.
-- src/queue.py: Contém a função send que envia mensagens para uma fila SQS.
-- docker-compose.yml: Arquivo de configuração do Docker Compose para o LocalStack.
-- execute_scripts.sh: Script para executar comandos que criam a infraestrutura AWS no LocalStack.
-- scripts/01_create_profile.sh: Cria o perfil da conta.
-- scripts/02_create_bucket.sh: Cria bucket S3
-- scripts/03_create_queue.sh: Cria Fila SQS
-- scripts/04_create_function.sh: Cria Função Lambda
-- scripts/05_create_dynamodb_table.sh: Cria tabela do dynamoDB e Configura o stream com a função Lambda
-- insert.sh: Insere um registro na tabela do dynamoDB
+## Project Structure
+- lambda_function.py: Contains the simulated Lambda function that processes DynamoDB Streams events and sends the result to an SQS queue.
+- src/dynamo_event_handler.py: Contains the logic for processing DynamoDB Streams events.
+- src/queue.py: Contains the send function that sends messages to an SQS queue.
+- docker-compose.yml: Docker Compose configuration file for LocalStack.
+- execute_scripts.sh: Script to execute commands that create the AWS infrastructure in LocalStack.
+- scripts/01_create_profile.sh: Creates the account profile.
+- scripts/02_create_bucket.sh: Creates an S3 bucket.
+- scripts/03_create_queue.sh: Creates an SQS queue.
+- scripts/04_create_function.sh: Creates a Lambda function.
+- scripts/05_create_dynamodb_table.sh: Creates a DynamoDB table and configures the stream with the Lambda function.
+- insert.sh: Inserts a record into the DynamoDB table.
 
-## Contribuições
-Sinta-se à vontade para contribuir para este projeto abrindo issues ou enviando pull requests. Se você tiver sugestões de melhorias ou encontrar problemas, ficaremos felizes em ouvir suas opiniões!
-
-## Licença
-Este projeto é licenciado sob a Licença MIT.
+## Contributions
+Feel free to contribute to this project by opening issues or sending pull requests. If you have suggestions for improvements or encounter issues, we'd love to hear your feedback!
+## License
+This project is licensed under the MIT License.
