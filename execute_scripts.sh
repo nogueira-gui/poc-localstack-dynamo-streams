@@ -31,6 +31,8 @@ cd ..
 echo "Executando create_function.sh"
 bash ./scripts/create_function.sh
 
-# invoke_function
-# echo "Executando invoke_function.sh"
-# bash ./scripts/invoke_function.sh
+# create_dynamodb_table
+echo "Executando create_dynamodb_table.sh"
+bash ./scripts/create_dynamodb_table.sh
+
+echo "execute_scripts.sh finalizado!"

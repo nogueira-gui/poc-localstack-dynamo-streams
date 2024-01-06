@@ -1,27 +1,21 @@
 import unittest
 
 from unittest.mock import patch, Mock
-
-import os
-import sys
-
-# Adicione o caminho para o diretório que contém lambda_function.py ao Python PATH
-sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
-
 from lambda_function import lambda_handler
 
 
 class TestLambdaFunction(unittest.TestCase):
 
-    @patch('boto3.client')
-    def test_lambda_success(self, mock_boto3_client):
-        mock_sqs_client = Mock()
-        mock_boto3_client.return_value = mock_sqs_client
-        mock_sqs_client.send_message.return_value = {'MessageId': 'test-id'}
+    @patch('lambda_function.queue')
+    def test_lambda_success(self, mock_queue_service):
+        mock_queue = Mock()
+        mock_queue_service.return_value = mock_queue
+        mock_queue_service.send.return_value = {'MessageId': 'test-id'}
 
         result = lambda_handler(getEvent(), None)
         self.assertEqual(result['statusCode'], 200)
         self.assertEqual(result['body'], '{"id": "1", "name": "Gui"}')
+
 
 # getEvent should return a dynamo streams event
 def getEvent(): return {
