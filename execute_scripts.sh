@@ -6,14 +6,14 @@ IAM_ROLE_ARN="arn:aws:iam::000000000000:role/lambda-role"
 
 # create_profile
 echo "Executando create_profile.sh"
-bash ./scripts/create_profile.sh
+bash ./scripts/01_create_profile.sh
 
 # create_bucket
 echo "Executando create_bucket.sh"
-bash ./scripts/create_bucket.sh
+bash ./scripts/02_create_bucket.sh
 
 echo "Executando create_queue.sh"
-bash ./scripts/create_queue.sh
+bash ./scripts/03_create_queue.sh
 
 # Navigate to the lambda directory
 cd lambda
@@ -29,10 +29,10 @@ cd ..
 
 # create_function
 echo "Executando create_function.sh"
-bash ./scripts/create_function.sh
+bash ./scripts/04_create_function.sh
 
 # create_dynamodb_table
 echo "Executando create_dynamodb_table.sh"
-bash ./scripts/create_dynamodb_table.sh
+bash ./scripts/05_create_dynamodb_table.sh
 
 echo "execute_scripts.sh finalizado!"
